@@ -29,10 +29,12 @@ export default function Home() {
   }
    const paymentClick = () =>{
     navigate('/payment')
-   }
-    const coursesClick = ()=>{
-      navigate('/courses')
-    }
+  }
+   
+  const profileClick = () =>{
+    navigate('/profile')
+  }
+  
   
 
   return (
@@ -70,7 +72,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a onClick={coursesClick } href="">
+                  <a href="/assignments">
                     <img src={assessments} alt="Assignments" className="sidebar-icon" />
                     Courses
                   </a>
@@ -126,7 +128,7 @@ export default function Home() {
               <div className="sidebar-section">
                 <p className="sidebar-heading">Account</p>
                 <li>
-                  <a href="/profile">
+                  <a onClick={profileClick} href="">
                     <img src={icon7} alt="Profile" className="sidebar-icon" />
                     Profile
                   </a>
