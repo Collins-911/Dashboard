@@ -57,7 +57,7 @@ export default function Profile() {
             </div>
             <div className="info-row">
               <span>Email verification:</span>{' '}
-              <strong className="pending">Pending</strong>
+              <strong className="pending">Pend</strong>
             </div>
             <div className="info-row">
               <span>Contact:</span> <strong>09092651280</strong>
