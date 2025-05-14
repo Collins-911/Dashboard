@@ -1,23 +1,31 @@
 import React from 'react';
 import '../../css/profile.css';
-import cimage from '../../assets/cimage.png';
 import { FaUser, FaPhone, FaIdCard, FaRedoAlt } from 'react-icons/fa';
 import { FiEdit } from 'react-icons/fi';
-import { useNavigate, Link } from 'react-router-dom'; // ✅ Import Link
+import { useNavigate, Link } from 'react-router-dom';
 
+// HOME COMPONENT
 export function Home() {
   const navigate = useNavigate();
+
   const editclick = () => {
     navigate('/student');
   };
 
-
+  return (
+    <div style={{ padding: '20px' }}>
+      <h1>Welcome Home</h1>
+      <button onClick={editclick}>Go to Student Page</button>
+    </div>
+  );
 }
 
+// PROFILE COMPONENT
 export default function Profile() {
   return (
     <div className="profile-wrapper">
       <div className="merged-card">
+        {/* Navigation Tabs */}
         <div className="card-top-nav">
           <Link to="/profile" className="nav-item active">
             <FaUser className="nav-icon green" />
@@ -33,6 +41,7 @@ export default function Profile() {
           </Link>
         </div>
 
+        {/* Profile Content */}
         <div className="card-content">
           <div className="profile-left">
             <img
@@ -57,7 +66,7 @@ export default function Profile() {
             </div>
             <div className="info-row">
               <span>Email verification:</span>{' '}
-              <strong className="pending">Pend</strong>
+              <strong className="pending">Pending</strong>
             </div>
             <div className="info-row">
               <span>Contact:</span> <strong>09092651280</strong>
