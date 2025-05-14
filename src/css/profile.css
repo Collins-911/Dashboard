@@ -67,9 +67,11 @@ body {
     border-bottom-right-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 800px;
-    height: 400px;
+    width: 100%;
+    max-width: 800px;
+    height: auto; 
 }
+
 
 
 .profile-left {
@@ -80,7 +82,8 @@ body {
     padding: 20px;
     background-color: #0f017a;
     color: white;
-    width: 600px;
+    width: 50%;
+    min-width: 250px;
     text-align: center;
 }
 
@@ -141,10 +144,16 @@ body {
 @media (max-width: 768px) {
     .card-content {
         flex-direction: column;
+        height: auto;
     }
 
     .profile-left, .profile-right {
         width: 100%;
-        text-align: center;
+        border-radius: 0;
+    }
+
+    .profile-left {
+        padding: 30px 20px;
     }
 }
+
